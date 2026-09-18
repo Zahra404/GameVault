@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal with Timer Circle</title>
+  <style>
+    /* Modal styling */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Circle */
+    .progress-ring {
+      transform: rotate(-90deg);
+      width: 150px;
+      height: 150px;
+    }
+    .progress-ring__circle {
+      fill: transparent;
+      stroke: #01AAAD;
+      stroke-width: 6;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s linear;
+    }
+    #timer-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- <button onclick="openModal()">Open Modal</button> -->
+
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <svg class="progress-ring" width="150" height="150">
+        <circle
+          class="progress-ring__circle"
+          stroke="blue"
+          stroke-width="12"
+          fill="transparent"
+          r="70"
+          cx="75"
+          cy="75"
+        />
+      </svg>
+      <div id="timer-text">2:00</div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const circle = document.querySelector(".progress-ring__circle");
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = 0;
+
+    const totalTime = 120; // 2 minutes = 120 seconds
+    let timeLeft = totalTime;
+    let interval;
+
+    function setProgress(percent) {
+      const offset = circumference - percent * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
+    function openModal() {
+      modal.style.display = "flex";
+      startTimer();
+    }
+
+    function startTimer() {
+      timeLeft = totalTime;
+      setProgress(1); // full circle
+      updateTimerText();
+      interval = setInterval(() => {
+        timeLeft--;
+        const percent = timeLeft / totalTime;
+        setProgress(percent);
+        updateTimerText();
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          modal.style.display = "none"; // auto-close modal when done
+        }
+      }, 1000);
+    }
+
+    function updateTimerText() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      document.getElementById("timer-text").textContent =
+        `${minutes}:${seconds.toString().padStart(2, "0")}`;
+    }
+    window.onload = openModal;
+  </script>
+</body>
+</html>
