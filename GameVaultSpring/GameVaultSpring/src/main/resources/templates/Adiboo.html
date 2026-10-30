@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel&family=Dancing+Script&family=Montserrat:ital,wght@0,100;0,200;1,200&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="card" style="width: 18rem;">
+    <img th:src="@{/img/Adiboo.jpg}" class="card-img-top" alt="Adiboo game">
+    <div class="card-body">
+        <h5 class="card-title">Adiboo</h5>
+        <p class="card-text">follow Adiboo, a young alien who teaches children about a variety of topics including
+            nature, maths, and language. Most stories are set in the world of Celesta.</p>
+    </div>
+</div>
+
+<br>
+<div class="wrapper">
+    <div class="chat-box">
+        <div class="desc-text">
+            Please fill out the form below to start chatting with the next available agent.
+        </div>
+        <form action="#">
+            <div class="field textarea">
+                <textarea cols="30" rows="10" placeholder="what do you think about this game?.." required></textarea>
+            </div>
+            <div class="field">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="last">
+
+    <h3 class="getInTouch">Get in Touch</h3>
+    <a href="">
+        <img class="inst" src="/img/iconfinder_instagram_6636603.png" alt="instagram">
+    </a>
+    <a href="mailto:">
+        <img class="mail" src="/img/iconfinder_gmail_132837.png" alt="gmail">
+    </a>
+    <p class="copyright">© 2026 Game Vault </p>
+
+</div>
+
+
+</body>
+
+
+
+</html>

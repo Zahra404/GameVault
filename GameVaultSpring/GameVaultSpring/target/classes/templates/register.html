@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Game Vault</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="auth-page">
+    <h1>Create a Game Vault account</h1>
+    <p th:if="${error}" th:text="${error}" class="error-message" role="alert"></p>
+    <form th:action="@{/gameVault/register}" method="post" class="auth-form">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a th:href="@{/gameVault/login}">Login</a></p>
+</main>
+</body>
+</html>
