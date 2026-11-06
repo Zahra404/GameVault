@@ -1,0 +1,4 @@
+com\example\GameVaultSpring\repository\GameVaultRepo.class
+com\example\GameVaultSpring\entity\User.class
+com\example\GameVaultSpring\controller\GameVaultController.class
+com\example\GameVaultSpring\repository\UserRepo.class

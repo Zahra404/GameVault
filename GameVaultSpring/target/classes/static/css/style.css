@@ -1,0 +1,604 @@
+/**
+* ! Changing default styles of the browser
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+}
+
+.auth-page {
+    width: min(420px, calc(100% - 32px));
+    margin: 8vh auto;
+    color: white;
+}
+
+.auth-page h1 {
+    margin-bottom: 24px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #B0CDE6;
+    border-radius: 4px;
+}
+
+.auth-form button {
+    margin-top: 8px;
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #B0CDE6;
+    color: #000000;
+    cursor: pointer;
+}
+
+.error-message {
+    margin-bottom: 16px;
+    color: #ff6b6b;
+}
+
+.success-message {
+    margin-bottom: 16px;
+    color: #7ee787;
+}
+
+.last {
+    /*padding:0 20px 20px;*/
+    /* padding-top: 0; */
+    background-color: #B0CDE6;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+.titlename{
+    font-family: "Moon Dance", serif;
+    font-size: 50px;
+}
+
+.subtitle{
+    font-size: 30px;
+    color: black;
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    /* color: white; */
+    color: cadetblue;
+}
+
+p, h3, h2 {
+    color: white;
+}
+
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: #212529; */
+    /* background: pink;
+    color: white; */
+    padding: 25px 60px;
+    margin-bottom: 30px;
+}
+
+.bell, .chats {
+    position: relative;
+    background-color: #B0CDE6;
+    color: #212529;
+    font-size: 30px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 4px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/* Shop Items */
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-image: url('../images/sketch1611443574051.png');
+    background-repeat: no-repeat;
+    /* background-color: #000000; */
+    background-size: 480px 700px;
+    background-position: right;
+
+}
+
+.item {
+    border: 2px solid #212529;
+    border-radius: 4px;
+}
+.item img {
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.bi-dash-lg {
+    color: red;
+}
+
+.bi-plus-lg {
+    color: green;
+}
+.bi-x-lg{
+    color: white;
+}
+
+/**
+* ! style rules for label and some buttons
+**/
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.HomeBtn,
+.checkout,
+.removeAll {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout {
+    background-color: cadetblue;
+}
+
+/* style rules for shopping-cart */
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+/**
+* ! style rules for cart-item
+**/
+
+.cart-item {
+    border: 2px solid #212529;
+    border-radius: 5px;
+    display: flex;
+    border-style: solid;
+    border-color: cadetblue;
+}
+
+.title-price-x {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-price {
+    background-color: pink;
+    color: black;
+    border-radius: 4px;
+    padding: 3px 6px;
+    border-style: solid;
+    border-color: cadetblue;
+}
+
+.top {
+    /* background-color: #ffffff; */
+    margin: 0;
+    /* font-family: Parisienne, cursive; */
+
+    /* background: linear-gradient(to right, #b19cd9 40%, #000000 100%); */
+    background: linear-gradient(to right, #B0CDE6 0%, #000000 100%);
+    /* padding: 3%; */
+}
+
+.flower {
+    background-image: url('images/sketch1611443574051.png');
+    background-repeat: no-repeat;
+    background-size: 480px 700px;
+    /* -webkit-background-size: 480px 700px;;
+    -moz-background-size: 480px 700px;;
+    -o-background-size: 480px 700px;; */
+    /* background-attachment: fixed; */
+    background-position: right;
+}
+
+.inst {
+    width: 50px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    margin-left: 45.5%;
+
+}
+
+.mail {
+    width: 60px;
+    /* margin-left: 30px; */
+    margin-top: 5px;
+
+
+}
+
+.getInTouch {
+
+    /* color: #C76B6F; */
+    padding: 1%;
+    font-family: Alex Brush;
+    font-size: 250%;
+    margin: 0;
+    text-align: center;
+
+}
+
+.copyright {
+    color: #40514E;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+#printHere {
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    font-size: 5vw;
+    color: #39ff14;
+    background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #A290B7;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    margin-bottom: 170px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+    background: #f2f2f2;
+}
+#click{
+    display: none;
+}
+label{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    height: 55px;
+    width: 55px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+label i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+label i.fas{
+    opacity: 0;
+    pointer-events: none;
+}
+#click:checked ~ label i.fas{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ label i.fab{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.wrapper{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#click:checked ~ .wrapper{
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: auto;
+}
+.wrapper .head-text{
+    line-height: 60px;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+.wrapper .chat-box{
+    padding: 20px;
+    width: 100%;
+}
+.chat-box .desc-text{
+    color: #515365;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.chat-box form{
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+}
+.chat-box form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.chat-box form .field:last-child{
+    margin-bottom: 15px;
+}
+form .field input,
+form .field button,
+form .textarea textarea{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+form .field input:focus,
+form .textarea textarea:focus{
+    border-color: #fc83bb;
+}
+form .field input::placeholder,
+form .textarea textarea::placeholder{
+    color: silver;
+    transition: all 0.3s ease;
+}
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder{
+    color: lightgrey;
+}
+.chat-box form .textarea{
+    height: 70px;
+    width: 100%;
+}
+.chat-box form .textarea textarea{
+    height: 100%;
+    border-radius: 50px;
+    resize: none;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+.chat-box form .field button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    transition: all 0.3s ease;
+}
+.chat-box form .field button:active{
+    transform: scale(0.97);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background: #222225;
+    color: white;
+    margin: 100px auto;
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.rating > input{
+    display:none;
+}
+.rating > label {
+    position: relative;
+    width: 1.1em;
+    font-size: 15vw;
+    color: #FFD700;
+    cursor: pointer;
+    background: none;
+    height: auto;
+    line-height: normal;
+    border-radius: 0;
+    text-align: initial;
+}
+.rating > label::before{
+    content: “\2605”;
+    position: absolute;
+    opacity: 0;
+}
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+    opacity: 1 !important;
+}
+.rating > input:checked ~ label:before{
+    opacity:1;
+}
+.rating:hover > input:checked ~ label:before{
+    opacity: 0.4;
+}
