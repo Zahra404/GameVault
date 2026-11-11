@@ -8,9 +8,39 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: sans-serif;
     background-color: #000000;
+}
+
+@font-face {
+    font-family: 'GameVault';
+    src: url('/fonts/HennyPenny-Regular.ttf') format('truetype');
+}
+
+.GameVaultTitle{
+    font-family: GameVault;
+    color: #407F81;
+    margin-left: 40px;
+
+}
+
+.hrefGV{
+    text-decoration: none;
+}
+.login   {
+    color: #407F81;
+    text-decoration: none;
+    margin-left: 350px;
+}
+
+.register   {
+    color: #407F81;
+    text-decoration: none;
 }
 
 .auth-page {
@@ -80,11 +110,7 @@ i {
     cursor: pointer;
 }
 
-a {
-    text-decoration: none;
-    /* color: white; */
-    color: cadetblue;
-}
+
 
 p, h3, h2 {
     color: white;
@@ -140,6 +166,11 @@ p, h3, h2 {
     /* background-color: #000000; */
     background-size: 480px 700px;
     background-position: right;
+
+    height: 100%;
+    width: 100%;
+    margin-left: 120px;
+    overflow-y: scroll;
 
 }
 
@@ -409,6 +440,22 @@ body{
     overflow: hidden;
     background: #f2f2f2;
 }
+.catalogue-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.catalogue-page .last {
+    position: static;
+}
+.game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.game-list .card-img-top {
+    display: block;
+    width: 280px;
+}
 #click{
     display: none;
 }
@@ -559,16 +606,7 @@ form .textarea textarea:focus::placeholder{
 
 
 
-
-
-
-body{
-    background: #222225;
-    color: white;
-}
 .rating {
-    display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
 }
 .rating > input[type="radio"] {
@@ -602,4 +640,36 @@ body{
 }
 .rating:hover > input:checked ~ label::before {
     opacity: 0.4;
+}
+
+.card-img-top{
+    width: 400px;
+}
+
+.card {
+    width: 400px;
+}
+
+
+.imgCommants{
+    margin-top: 70px;
+}
+
+.container {
+    display: flex;
+}
+/*.container div {*/
+/*    width: 50%;*/
+/*}*/
+
+.infoReview {
+    overflow: auto;
+    width: 65%;
+    margin-left: 110px;
+}
+
+.saerchBar {
+    margin-left: 120px;
+    margin-top: 40px;
+    width: 30%;
 }

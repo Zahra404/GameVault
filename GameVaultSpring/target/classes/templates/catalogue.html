@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Vault</title>
     <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel&family=Dancing+Script&family=Montserrat:ital,wght@0,100;0,200;1,200&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="catalogue-page">
 <div class="navbar top">
-    <a th:href="@{/gameVault/home}">
-        <h1 style="text-shadow: 2px 2px #39ff14; font-family: Parisienne, cursive; font-size: 50px; color: black;">Game Vault</h1>
+    <a th:href="@{/gameVault/home}" class="hrefGV">
+        <h1 class="GameVaultTitle">Game Vault</h1>
     </a>
-    <a th:href="@{/gameVault/login}">Login</a>
-    <a th:href="@{/gameVault/register}">Register</a>
+    <a th:href="@{/gameVault/login}" class="login">Login</a>
+    <a th:href="@{/gameVault/register}" class="register">Register</a>
 
     <a href="bell.html">
         <div class="bell">
@@ -35,18 +36,30 @@
     </a>
 </div>
 
-
-
+<div>
+    <h2>Search</h2>
+    <input type="text" class="saerchBar" placeholder="Search by title, keyword or date">
+</div>
 <div class="shop" id="shop" style="display: flex; justify-content: flex-start;">
-    <div class="card" style="width: 10rem;">
-        <img th:src="@{/img/Adiboo.jpg}" class="card-img-top" alt="Adiboo game">
-        <div class="card-body">
-            <h5 class="card-title">Adiboo</h5>
-            <p class="card-text">follow Adiboo, a young alien who teaches children about a variety of topics including
-                nature, maths, and language. Most stories are set in the world of Celesta.</p>
-            <a th:href="@{/gameVault/Adiboo}" class="btn btn-primary">View</a>
-        </div>
+
+    <div class="game-list">
+        <a th:href="@{/gameVault/Adiboo}"><img th:src="@{/img/Adiboo.jpg}" alt="Adiboo" class="card-img-top"></a>
+        <a th:href="@{/gameVault/MilknNuts}"><img th:src="@{/img/MilknNuts.jpg}" alt="milknNuts" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Apex}"><img th:src="@{/img/Apex.jpg}" alt="Apex" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Spyro}"><img th:src="@{/img/Spyro.jpg}" alt="Spyro" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Skyrim}"><img th:src="@{/img/Skyrim.jpg}" alt="Skyrim" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Rayman}"><img th:src="@{/img/Rayman.jpg}" alt="Rayman" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Ark}"><img th:src="@{/img/Ark.jpg}" alt="Ark" class="card-img-top"></a>
+        <a th:href="@{/gameVault/AssassinsCreed}"><img th:src="@{/img/AssassinCreed.avif}" alt="AC" class="card-img-top"></a>
+        <a th:href="@{/gameVault/CircusCharlie}"><img th:src="@{/img/CircusCharlie.jpg}" alt="CC" class="card-img-top"></a>
+        <a th:href="@{/gameVault/CODwm}"><img th:src="@{/img/CODwm4.jpg}" alt="CODmw4" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Contra}"><img th:src="@{/img/ContraAlienWars.jpg}" alt="Contra" class="card-img-top"></a>
+        <a th:href="@{/gameVault/Fortnite}"><img th:src="@{/img/fortnite.jpg}" alt="fortnite" class="card-img-top"></a>
+        <a th:href="@{/gameVault/GenshinImpact}"><img th:src="@{/img/GenshinImpact.jpg}" alt="GenshinImpact" class="card-img-top"></a>
+        <a th:href="@{/gameVault/GhostOfTsishima}"><img th:src="@{/img/ghostoftsishima.jpg}" alt="Got" class="card-img-top"></a>
+
     </div>
+
     <button class="open-button" onclick="openForm()">Add New Game</button>
 
     <div class="form-popup" id="myForm">
@@ -84,7 +97,7 @@
 
 </div>
 
-<script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     function openForm() {
         document.getElementById("myForm").style.display = "block";
     }
